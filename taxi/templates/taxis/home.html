@@ -1,0 +1,24 @@
+{% extends 'taxis/header.html' %}
+
+{% block content %}
+<h1>List of TAXIs</h1>
+{% load render_table from django_tables2 %}
+{% load static %}
+<h1>Availabe</h1>
+<div class="table table-thead">
+ {% render_table objs %}
+    </div>
+<h1>Booked</h1>
+<div class="table table-thead">
+ {% render_table book %}
+</div>
+<!-- {% for item in objs %}-->
+<!--    <tr>-->
+<!--         <td>{{ item.field1 }}</td>-->
+<!--         <td>{{ item.field2 }}</td>-->
+<!--         <td>{{ item.field3 }}</td>-->
+<!--         <td>{{ item.field4 }}</td>-->
+<!--    </tr>-->
+<!--       {% endfor %}-->
+
+{% endblock %}
